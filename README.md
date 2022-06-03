@@ -76,6 +76,7 @@ log.close()
 ```
 
 ## IP hits
+
 ```bash
 import logparser
 
@@ -111,7 +112,7 @@ for ip in ipCounter:
     print("{:20} - {}".format(ip,hit))
 ```
  
- bash```
+ ```bash
  **Output:**
  45.145.161.12        - 680
 45.132.51.36         - 846
