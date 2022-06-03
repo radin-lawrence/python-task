@@ -204,3 +204,54 @@ for day in dayCounter:
 
   print("{} - {}".format(day,hits))
   ```
+  
+  
+ ## Print UID od each user under the /etc/passwd
+ 
+ nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
+root:*:0:0:System Administrator:/var/root:/bin/sh
+daemon:*:1:1:System Services:/var/root:/usr/bin/false
+_uucp:*:4:4:Unix to Unix Copy Protocol:/var/spool/uucp:/usr/sbin/uucico
+_taskgated:*:13:13:Task Gate Daemon:/var/empty:/usr/bin/false
+_networkd:*:24:24:Network Services:/var/networkd:/usr/bin/false
+_installassistant:*:25:25:Install Assistant:/var/empty:/usr/bin/false
+_lp:*:26:26:Printing Services:/var/spool/cups:/usr/bin/false
+_postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
+_scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
+_ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
+_appstore:*:33:33:Mac App Store Service:/var/db/appstore:/usr/bin/false
+ 
+ ```bash
+ file = open('/etc/passwd','r')
+
+def make_fields(line):
+  
+  fields = line.rstrip().split(":")
+
+  return {"name":fields[0] , 
+          "password":fields[1] , 
+          "uid":fields[2] , 
+          "gid":fields[3] , 
+          "comment":fields[4] ,
+          "home":fields[5],
+          "shell": fields[6]
+         }
+
+for line in file:
+    
+  if not line.startswith("#"):
+    
+    fields = make_fields(line)
+    
+    
+    if int(fields['uid']) >= 200 and int(fields['uid']) <= 250:
+        
+        print('{} - {}'.format(fields['uid'],fields['name']))
+```
+200 - _softwareupdate
+202 - _coreaudiod
+203 - _screensaver
+205 - _locationd
+208 - _trustevaluationagent
+210 - _timezone
+211 - _lda
