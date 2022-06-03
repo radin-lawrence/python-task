@@ -110,6 +110,8 @@ for ip in ipCounter:
         
     print("{:20} - {}".format(ip,hit))
 ```
+ 
+ bash```
  **Output:**
  45.145.161.12        - 680
 45.132.51.36         - 846
@@ -119,6 +121,7 @@ for ip in ipCounter:
 45.153.227.31        - 876
 45.138.4.22          - 880
 87.247.143.24        - 736
+```
 
 ## Hit received per day
 
