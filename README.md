@@ -208,6 +208,7 @@ for day in dayCounter:
   
  ## Print UID od each user under the /etc/passwd
  
+ ```bash
  nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
 root:*:0:0:System Administrator:/var/root:/bin/sh
 daemon:*:1:1:System Services:/var/root:/usr/bin/false
@@ -220,6 +221,7 @@ _postfix:*:27:27:Postfix Mail Server:/var/spool/postfix:/usr/bin/false
 _scsd:*:31:31:Service Configuration Service:/var/empty:/usr/bin/false
 _ces:*:32:32:Certificate Enrollment Service:/var/empty:/usr/bin/false
 _appstore:*:33:33:Mac App Store Service:/var/db/appstore:/usr/bin/false
+ ```
  
  ```bash
  file = open('/etc/passwd','r')
@@ -248,6 +250,8 @@ for line in file:
         
         print('{} - {}'.format(fields['uid'],fields['name']))
 ```
+
+```bash
 200 - _softwareupdate
 202 - _coreaudiod
 203 - _screensaver
@@ -255,3 +259,4 @@ for line in file:
 208 - _trustevaluationagent
 210 - _timezone
 211 - _lda
+```
