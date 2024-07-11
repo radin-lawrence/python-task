@@ -206,7 +206,7 @@ for day in dayCounter:
   ```
   
   
- ## Print UID od each user under the /etc/passwd
+ ## Print UID of each user under the /etc/passwd
  
  ```bash
  nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false
