@@ -262,7 +262,7 @@ for line in file:
 ```
 
 
-
+```bash
 echo "ClientAliveInterval 60" >> /etc/ssh/sshd_config
 echo "LANG=en_US.utf-8" >> /etc/environment
 echo "LC_ALL=en_US.utf-8" >> /etc/environment
@@ -288,4 +288,4 @@ EOF
  
 service httpd restart
 chkconfig httpd on
-
+```
